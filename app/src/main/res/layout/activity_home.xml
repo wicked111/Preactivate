@@ -46,34 +46,20 @@
 
     </androidx.appcompat.widget.Toolbar>
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/searchInputbtn"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_height="45dp"
+        android:hint="Search.."
+        android:textColorHint="@color/tabcolor"
+        android:paddingHorizontal="12dp"
+        android:layout_marginHorizontal="10dp"
+        android:gravity="center_vertical"
+        android:layout_gravity="center"
+        android:drawableEnd="@drawable/search"
+        android:background="@drawable/backgroundforsearchbutton"/>
 
-        <
-            android:id="@+id/searchBarNews"
-            android:layout_width="wrap_content"
-            android:paddingBottom="@dimen/_10sdp"
-            android:paddingTop="@dimen/_2ssp"
-            android:layout_height="wrap_content"
-            android:paddingHorizontal="@dimen/_8ssp"
-            app:mt_hint="Explore what's going on..."
-            app:mt_maxSuggestionsCount="10"
-            app:mt_placeholderColor="@color/black"
-            app:mt_navIconEnabled="false"
-            app:mt_hintColor="@color/black"
-            android:fadeScrollbars="true"
-            android:fadingEdge="horizontal"
-            android:elevation="@dimen/_10sdp"
-            app:mt_textColor="@color/black"
-            app:mt_placeholder="Search News"
-            app:mt_roundedSearchBarEnabled="true"
-            app:mt_searchBarColor="@color/whiteopac"
-            app:mt_speechMode="false" />
 
-    </LinearLayout>
 
 
 </LinearLayout>

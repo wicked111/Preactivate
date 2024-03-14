@@ -47,6 +47,5 @@ dependencies {
     //....Circular Image View....
     implementation("de.hdodenhof:circleimageview:3.1.0")
     //...Material Search...........
-    implementation ("com.github.mancj:MaterialSearchBar:0.8.5")
     implementation("com.google.android.material:material:1.11.0")
 }
