@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="background">#191918</color>
+    <color name="detail">#686868</color>
+    <color name="widgetcolor">#494949</color>
+    <color name="tabcolor">#D4D4D4</color>
+    <color name="informationbackground">#803C3C3C</color>
+    <color name="dependencycolor">#C0C0C0</color>
+</resources>
