@@ -36,7 +36,7 @@
                 app:dividerColor="@color/background"/>
 
             <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/circularImageView"
+                android:id="@+id/profileoftheuser"
                 android:layout_width="45dp"
                 android:layout_height="45dp"
                 android:layout_gravity="center"
@@ -49,10 +49,14 @@
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/searchInputbtn"
         android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:hint="Search.."
-        android:textColorHint="@color/tabcolor"
+        android:layout_height="wrap_content"
+        android:text="Search.."
+        android:textColor="@color/tabcolor"
+        android:textSize="16dp"
         android:paddingHorizontal="12dp"
+        android:paddingVertical="14dp"
+        android:textStyle="normal"
+        android:textAllCaps="false"
         android:layout_marginHorizontal="10dp"
         android:gravity="center_vertical"
         android:layout_gravity="center"
@@ -61,9 +65,9 @@
 
     <com.google.android.material.tabs.TabLayout
         android:layout_width="match_parent"
-        android:layout_margin="10dp"
         android:background="@color/background"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:id="@+id/tabLayoutpreactivate"
         android:scrollbars="horizontal"
         app:layout_constraintEnd_toEndOf="parent"

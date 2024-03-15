@@ -125,14 +125,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:src="@drawable/apple" />
+                android:src="@drawable/x" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:padding="10dp"
-                android:text="Continue with Apple Id"
+                android:text="Continue with X"
                 android:textColor="@color/background"
                 android:textSize="16dp"
                 android:textStyle="bold" />

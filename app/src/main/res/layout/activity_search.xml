@@ -1,9 +1,34 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".insider.SearchActivity">
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:background="@color/background">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/searchInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint= "Search dependency.."
+        android:paddingVertical="14dp"
+        android:fontFamily="@font/inter"
+        android:paddingHorizontal="10dp"
+        android:textColor="@color/tabcolor"
+        android:textColorHint="@color/tabcolor"
+        android:drawableEnd="@drawable/search"
+        android:background="@drawable/backgroundforsearchbutton"
+        android:layout_marginBottom="14dp"/>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/TrackAlbumArtistRV"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"/>
+
+
+
+
+</LinearLayout>

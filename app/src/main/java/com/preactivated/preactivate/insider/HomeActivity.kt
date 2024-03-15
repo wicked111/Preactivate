@@ -1,32 +1,84 @@
 package com.preactivated.preactivate.insider
 
+import android.annotation.SuppressLint
+import android.content.ContentValues.TAG
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
+import android.os.Looper
+import android.util.Log
 import android.view.View
 import android.view.WindowManager
 import android.widget.Button
+import android.widget.FrameLayout
+import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
+import androidx.fragment.app.FragmentManager
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
+import com.bumptech.glide.Glide
+import com.google.android.gms.tasks.Task
 import com.google.android.material.tabs.TabLayoutMediator
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.QuerySnapshot
 import com.preactivated.preactivate.R
+import com.preactivated.preactivate.insider.profile.BottomSheetDialogFragment
 import com.preactivated.preactivate.insider.profile.fragments.AndroidFragment
 import com.preactivated.preactivate.insider.profile.fragments.ExploreFragment
 import com.preactivated.preactivate.insider.profile.fragments.FlutterFragment
 import com.preactivated.preactivate.insider.profile.fragments.PythonFragment
 import com.preactivated.preactivate.insider.profile.fragments.ReactFragment
+import de.hdodenhof.circleimageview.CircleImageView
+import java.util.Objects
+import java.util.prefs.Preferences
 
 class HomeActivity : AppCompatActivity() {
 
     private lateinit var viewPager: ViewPager2
+    private lateinit var auth: FirebaseAuth
+    private lateinit var db: FirebaseFirestore
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
+        setupUI()
+
+        val currentUser = FirebaseAuth.getInstance().currentUser
+        if (currentUser != null) {
+            val userId = currentUser.email
+            Objects.requireNonNull(userId)?.let { Log.d("Something wennt wrong...", it) }
+        }
+
+        fetchUserData()
+
+        Objects.requireNonNull(
+            currentUser!!.email
+        )?.let {
+            Log.d(
+                "Something went wrong..", it
+            )
+        }
+
+        val preferences = Preferences.userRoot()
+        if (preferences["name", null] != null) {
+            val name = preferences["name", null]
+            Log.d("Something went wrong in the name", name)
+        }
+
+        val profileImageView = findViewById<CircleImageView>(R.id.profileoftheuser)
+        profileImageView.setOnClickListener {
+            val bottomSheetDialogFragment = BottomSheetDialogFragment()
+            bottomSheetDialogFragment.show(supportFragmentManager, "BottomSheetDialogFragment")
+        }
+
+    }
+
+    private fun setupUI() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             val decorView = window.decorView
             decorView.systemUiVisibility =
@@ -46,7 +98,6 @@ class HomeActivity : AppCompatActivity() {
                 decorView.systemUiVisibility or View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR
         }
 
-
         val searchbtn = findViewById<Button>(R.id.searchInputbtn)
         searchbtn.setOnClickListener {
             startActivity(Intent(this, SearchActivity::class.java))
@@ -65,6 +116,89 @@ class HomeActivity : AppCompatActivity() {
                 4 -> tab.text = "Python"
             }
         }.attach()
+
+        auth = FirebaseAuth.getInstance()
+        db = FirebaseFirestore.getInstance()
+
+        val userId = auth.currentUser?.uid
+        userId?.let {
+            db.collection("users").document(it)
+                .get()
+                .addOnSuccessListener { document ->
+                    val profilePicUrl = document.getString("profile")
+                    val profileImageView = findViewById<CircleImageView>(R.id.profileoftheuser)
+                    Glide.with(this).load(profilePicUrl).into(profileImageView)
+                }
+                .addOnFailureListener { exception ->
+                    Log.w(TAG, "Error getting user profile", exception)
+                }
+        }
+    }
+
+    @SuppressLint("RestrictedApi")
+    fun fetchUserData() {
+        val currentUser = FirebaseAuth.getInstance().currentUser
+        if (currentUser != null) {
+            val userId = currentUser.email
+            val db = FirebaseFirestore.getInstance()
+            putUserData(userId)
+            db.collection("users")
+                .get()
+                .addOnCompleteListener { task: Task<QuerySnapshot> ->
+                    if (task.isSuccessful) {
+                        for (document in task.result) {
+                            val dataMap =
+                                document.getData()
+                            val field1 = dataMap["email"] as String?
+                            val a =
+                                field1?.compareTo(currentUser.email!!) ?: -1
+                            if (a == 0) {
+                                val userName = dataMap["name"] as String?
+                                val userEmail = dataMap["email"] as String?
+                                val preferences =
+                                    Preferences.userRoot()
+                            }
+                        }
+                    } else {
+                        Log.d(
+                            FragmentManager.TAG,
+                            "Error getting documents: ",
+                            task.exception
+                        )
+                    }
+                }
+        }
+    }
+
+    private fun putUserData(phoneNumber: String?) {
+        val currentUser = FirebaseAuth.getInstance().currentUser
+        if (currentUser != null) {
+            val db = FirebaseFirestore.getInstance()
+            val query = db.collection("users").whereEqualTo("email", phoneNumber)
+            query.get().addOnCompleteListener { task ->
+                if (task.isSuccessful) {
+                    for (document in task.result) {
+                        db.collection("users").document(document.id)
+                            .update("realtimeId", currentUser.uid)
+                            .addOnSuccessListener {
+                                Log.d(
+                                    "Firestore",
+                                    "DocumentSnapshot updated successfully!"
+                                )
+                            }
+                            .addOnFailureListener { e ->
+                                Log.w(
+                                    "Firestore",
+                                    "Error updating document",
+                                    e
+                                )
+                            }
+                    }
+                } else {
+                    Log.w("Firestore", "Error getting documents.", task.exception)
+                }
+            }
+        }
     }
 
     private inner class ViewPagerAdapter(fragmentActivity: FragmentActivity) :
