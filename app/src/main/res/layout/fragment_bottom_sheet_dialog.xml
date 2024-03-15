@@ -34,7 +34,7 @@
                     android:layout_height="70dp">
 
                     <de.hdodenhof.circleimageview.CircleImageView
-                        android:id="@+id/profileoftheuser"
+                        android:id="@+id/profileoftheusercurrent"
                         android:layout_width="match_parent"
                         android:layout_alignParentStart="true"
                         android:layout_alignParentEnd="true"
@@ -122,120 +122,229 @@
                 android:layout_height="wrap_content"
                 android:text="General Settings"
                 android:textStyle="bold"
+                android:layout_marginBottom="2dp"
                 android:textSize="14dp"
                 android:textColor="@color/dependencycolor"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingVertical="5dp"
-                android:elevation="5dp"
-                android:background="@drawable/backgroundforsearchbutton"
-                android:paddingHorizontal="15dp"
-                android:layout_marginTop="10dp"
-                android:orientation="horizontal">
+                android:paddingVertical="10dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical">
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center_vertical"
-                    android:gravity="center_vertical"
-                    android:text="Settings"
-                    android:textStyle="bold"
-                    android:textSize="14dp"
-                    android:textColor="@color/dependencycolor"/>
-
-                <ImageView
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/settings"/>
+                    android:paddingVertical="5dp"
+                    android:elevation="5dp"
+                    android:background="@drawable/backgroundforsearchbutton"
+                    android:paddingHorizontal="15dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:text="Settings"
+                        android:textStyle="bold"
+                        android:textSize="14dp"
+                        android:textColor="@color/dependencycolor"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/settings"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="5dp"
+                    android:elevation="5dp"
+                    android:background="@drawable/backgroundforsearchbutton"
+                    android:paddingHorizontal="15dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:text="Connect Local Device"
+                        android:textStyle="bold"
+                        android:textSize="14dp"
+                        android:textColor="@color/dependencycolor"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/device"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="5dp"
+                    android:elevation="5dp"
+                    android:background="@drawable/backgroundforsearchbutton"
+                    android:paddingHorizontal="15dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:text="Refer to a Developer"
+                        android:textStyle="bold"
+                        android:textSize="14dp"
+                        android:textColor="@color/dependencycolor"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/refer"/>
+
+                </LinearLayout>
 
             </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Advanced Features"
+                android:textStyle="bold"
+                android:layout_marginBottom="2dp"
+                android:textSize="14dp"
+                android:textColor="@color/dependencycolor"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingVertical="5dp"
-                android:elevation="5dp"
-                android:background="@drawable/backgroundforsearchbutton"
-                android:paddingHorizontal="15dp"
-                android:layout_marginTop="10dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center_vertical"
-                    android:gravity="center_vertical"
-                    android:text="Connect Local Device"
-                    android:textStyle="bold"
-                    android:textSize="14dp"
-                    android:textColor="@color/dependencycolor"/>
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/device"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingVertical="5dp"
-                android:elevation="5dp"
-                android:background="@drawable/backgroundforsearchbutton"
-                android:paddingHorizontal="15dp"
-                android:layout_marginTop="10dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center_vertical"
-                    android:gravity="center_vertical"
-                    android:text="Refer to a Developer"
-                    android:textStyle="bold"
-                    android:textSize="14dp"
-                    android:textColor="@color/dependencycolor"/>
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/refer"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingVertical="5dp"
-                android:id="@+id/signout"
-                android:elevation="5dp"
-                android:background="@drawable/backgroundforsearchbutton"
-                android:paddingHorizontal="15dp"
-                android:layout_marginTop="10dp"
+                android:paddingVertical="10dp"
                 android:layout_marginBottom="60dp"
-                android:orientation="horizontal">
+                android:orientation="vertical">
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center_vertical"
-                    android:gravity="center_vertical"
-                    android:text="Signout"
-                    android:textStyle="bold"
-                    android:textSize="14dp"
-                    android:textColor="@color/dependencycolor"/>
-
-                <ImageView
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/shutdown"/>
+                    android:paddingVertical="5dp"
+                    android:elevation="5dp"
+                    android:background="@drawable/backgroundforsearchbutton"
+                    android:paddingHorizontal="15dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:text="Read Documentation"
+                        android:textStyle="bold"
+                        android:textSize="14dp"
+                        android:textColor="@color/dependencycolor"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/doc"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="5dp"
+                    android:elevation="5dp"
+                    android:background="@drawable/backgroundforsearchbutton"
+                    android:paddingHorizontal="15dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:text="Release a Dependency"
+                        android:textStyle="bold"
+                        android:textSize="14dp"
+                        android:textColor="@color/dependencycolor"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/create"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="5dp"
+                    android:elevation="5dp"
+                    android:background="@drawable/backgroundforsearchbutton"
+                    android:paddingHorizontal="15dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:text="Need Support ? Help Support"
+                        android:textStyle="bold"
+                        android:textSize="14dp"
+                        android:textColor="@color/dependencycolor"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/need"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="5dp"
+                    android:id="@+id/signout"
+                    android:elevation="5dp"
+                    android:background="@drawable/backgroundforsearchbutton"
+                    android:paddingHorizontal="15dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:text="Signout"
+                        android:textStyle="bold"
+                        android:textSize="14dp"
+                        android:textColor="@color/dependencycolor"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/shutdown"/>
+
+                </LinearLayout>
 
             </LinearLayout>
 
