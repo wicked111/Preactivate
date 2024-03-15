@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "223268467028",
+    "firebase_url": "https://preactivated-e9786-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "preactivated-e9786",
+    "storage_bucket": "preactivated-e9786.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:223268467028:android:a875f16ade5d4f8adf18c1",
+        "android_client_info": {
+          "package_name": "com.preactivated.preactivate"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "223268467028-fasts3k5qval522sne4g6h6l6oi15ive.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.preactivated.preactivate",
+            "certificate_hash": "ddd18286dac05404813357e305b67e350d76651d"
+          }
+        },
+        {
+          "client_id": "223268467028-sm3v8ublb343pm3u3l4dv00dceuvgi9p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.preactivated.preactivate",
+            "certificate_hash": "06dc7bf57a0872aecd667bc55795146e7192374b"
+          }
+        },
+        {
+          "client_id": "223268467028-ccf0uu4njcij8teckimfbjl6j9e5bhmg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDhu_ZlgP_F0I8GWk5M8A3hjlidupNBeZU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "223268467028-ccf0uu4njcij8teckimfbjl6j9e5bhmg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

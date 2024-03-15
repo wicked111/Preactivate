@@ -1,14 +1,15 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("com.google.gms.google-services")
 }
 
 android {
-    namespace = "com.example.preactivate"
+    namespace = "com.preactivated.preactivate"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.preactivate"
+        applicationId = "com.preactivated.preactivate"
         minSdk = 26
         targetSdk = 34
         versionCode = 1
@@ -46,6 +47,12 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
     //....Circular Image View....
     implementation("de.hdodenhof:circleimageview:3.1.0")
-    //...Material Search...........
-    implementation("com.google.android.material:material:1.11.0")
+    //...Firebase...........
+    implementation("com.google.firebase:firebase-firestore:24.10.3")
+    //....Authentication......
+    implementation("com.google.firebase:firebase-auth:22.3.1")
+    implementation(platform("com.google.firebase:firebase-bom:32.7.4"))
+    implementation("com.google.firebase:firebase-auth")
+    //.....Google Auth.........
+    implementation("com.google.android.gms:play-services-auth:21.0.0")
 }

@@ -1,4 +1,4 @@
-package com.example.preactivate
+package com.preactivated.preactivate
 
 import org.junit.Test
 

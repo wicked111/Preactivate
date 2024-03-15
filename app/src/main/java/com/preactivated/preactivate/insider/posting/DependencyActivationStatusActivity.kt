@@ -1,8 +1,8 @@
-package com.example.preactivate.insider.posting
+package com.preactivated.preactivate.insider.posting
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.preactivate.R
+import com.preactivated.preactivate.R
 
 class DependencyActivationStatusActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

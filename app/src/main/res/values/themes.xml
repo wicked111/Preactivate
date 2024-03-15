@@ -8,5 +8,14 @@
         <item name="android:navigationBarColor">@color/background</item>
     </style>
 
+    <style name="CustomTabLayout" parent="Widget.Design.TabLayout">
+        <!-- Color for the text of the tabs -->
+        <item name="tabTextColor">@color/tabcolor</item>
+        <!-- Color for the selected tab -->
+        <item name="tabSelectedTextColor">@color/white</item>
+        <!-- Color for the indicator under the selected tab -->
+        <item name="tabIndicatorColor">@color/tabcolor</item>
+    </style>
+
     <style name="Theme.Preactivate" parent="Base.Theme.Preactivate" />
 </resources>
