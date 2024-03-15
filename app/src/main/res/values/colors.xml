@@ -8,4 +8,5 @@
     <color name="tabcolor">#D4D4D4</color>
     <color name="informationbackground">#803C3C3C</color>
     <color name="dependencycolor">#C0C0C0</color>
+    <color name="smallheading">#7C7C7C</color>
 </resources>

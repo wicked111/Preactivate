@@ -55,4 +55,9 @@ dependencies {
     implementation("com.google.firebase:firebase-auth")
     //.....Google Auth.........
     implementation("com.google.android.gms:play-services-auth:21.0.0")
+    //....Image Carousel.............
+    implementation ("org.imaginativeworld.whynotimagecarousel:whynotimagecarousel:2.1.0")
+    //....Glide Dependency (For Image)........
+    implementation ("com.github.bumptech.glide:glide:4.14.2")
+    annotationProcessor ("com.github.bumptech.glide:compiler:4.14.2")
 }
