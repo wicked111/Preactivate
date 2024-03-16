@@ -1,8 +1,11 @@
 package com.preactivated.preactivate.insider
 
 import android.annotation.SuppressLint
+import android.content.BroadcastReceiver
 import android.content.ContentValues.TAG
+import android.content.Context
 import android.content.Intent
+import android.content.IntentFilter
 import android.os.Build
 import android.os.Bundle
 import android.os.Looper
@@ -12,6 +15,7 @@ import android.view.WindowManager
 import android.widget.Button
 import android.widget.FrameLayout
 import android.widget.ImageView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
@@ -41,10 +45,16 @@ class HomeActivity : AppCompatActivity() {
     private lateinit var viewPager: ViewPager2
     private lateinit var auth: FirebaseAuth
     private lateinit var db: FirebaseFirestore
+    private lateinit var profileImageView: CircleImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
+
+        profileImageView = findViewById(R.id.profileoftheuser)
+
+        val filter = IntentFilter("PROFILE_UPDATED")
+        registerReceiver(profileUpdateReceiver, filter)
 
         setupUI()
 
@@ -76,6 +86,17 @@ class HomeActivity : AppCompatActivity() {
             bottomSheetDialogFragment.show(supportFragmentManager, "BottomSheetDialogFragment")
         }
 
+
+    }
+
+    private val profileUpdateReceiver = object : BroadcastReceiver() {
+        override fun onReceive(context: Context, intent: Intent) {
+            if (intent.action == "PROFILE_UPDATED") {
+                val profilePicUrl = intent.getStringExtra("profilePicUrl")
+                Glide.with(this@HomeActivity).load(profilePicUrl).into(profileImageView)
+                Toast.makeText(this@HomeActivity, "Profile updated", Toast.LENGTH_SHORT).show()
+            }
+        }
     }
 
     private fun setupUI() {
@@ -219,4 +240,9 @@ class HomeActivity : AppCompatActivity() {
             }
         }
     }
+    override fun onDestroy() {
+        super.onDestroy()
+        unregisterReceiver(profileUpdateReceiver)
+    }
+
 }

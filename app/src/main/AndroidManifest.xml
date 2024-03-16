@@ -19,6 +19,21 @@
         android:theme="@style/Theme.Preactivate"
         tools:targetApi="31">
         <activity
+            android:name=".insider.profile.drawer.NeedSupportActivity"
+            android:exported="false" />
+        <activity
+            android:name=".insider.profile.drawer.ReleaseDependencyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".insider.profile.drawer.ReadDocumentationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".insider.profile.drawer.ConnectLocalDeviceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".insider.profile.drawer.SettingsActivity"
+            android:exported="false" />
+        <activity
             android:name=".insider.profile.connector.DeviceConnectorActivity"
             android:exported="false" />
         <activity
@@ -47,7 +62,7 @@
             android:exported="false" />
         <activity
             android:name=".insider.HomeActivity"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".starting.SplashActivity"
             android:exported="false" />
