@@ -1,5 +1,17 @@
 <resources>
-    <string name="app_name">Preactivate</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <array name="technology">
+        <item>Select Technology</item>
+        <item>Android</item>
+        <item>Flutter</item>
+        <item>React</item>
+        <item>Python</item>
+    </array>
+
+    <array name="technology_images">
+        <item>@drawable/android</item>
+        <item>@drawable/android</item>
+        <item>@drawable/flutter</item>
+        <item>@drawable/reactlogo</item>
+        <item>@drawable/python</item>
+    </array>
 </resources>

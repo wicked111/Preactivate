@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:background="@color/background"
+    android:layout_gravity="center"
+    android:paddingHorizontal="20dp"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".insider.profile.drawer.post.DependencyCategorySelectorActivity">
+
+    <ImageView
+        android:id="@+id/backbtn"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@drawable/arrow_bk"
+        android:layout_marginTop="20dp"
+        android:padding="4dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:paddingVertical="10dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_extrabold"
+            android:text="Select your Niche"
+            android:textColor="@color/dependencycolor"
+            android:textSize="24dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter"
+            android:layout_marginBottom="10dp"
+            android:gravity="start"
+            android:text="Select the technology in which you'll be releasing the dependency."
+            android:textColor="@color/detail"
+            android:textSize="14dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginBottom="20dp"
+        android:padding="2dp"
+        android:background="@drawable/bkforcreate">
+
+        <com.preactivated.preactivate.insider.profile.drawer.post.customspinner.CustomSpinner
+            android:id="@+id/spinner_technology"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:dropDownVerticalOffset="40dp"
+            android:background="@drawable/bg_spinner_technology"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/proceedbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_gravity="end"
+        android:gravity="end"
+        android:background="@drawable/bkforcreate"
+        android:fontFamily="@font/inter"
+        android:padding="18dp"
+        android:textColor="@color/white"
+        android:text="PROCED"
+        android:textSize="14sp" />
+
+</LinearLayout>
