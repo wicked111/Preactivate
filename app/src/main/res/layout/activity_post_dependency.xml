@@ -165,22 +165,22 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:gravity="center"
-                android:background="@drawable/bkforcreate">
+                android:background="@drawable/bkforcreate"
+                android:gravity="center">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
-                    android:background="@drawable/bkforrep"
-                    android:paddingHorizontal="15dp"
                     android:layout_height="match_parent"
-                    android:orientation="horizontal">
+                    android:background="@drawable/bkforrep"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="15dp">
 
                     <de.hdodenhof.circleimageview.CircleImageView
                         android:id="@+id/profileoftheuserinsider"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
-                        android:layout_marginEnd="5dp"
                         android:layout_gravity="center"
+                        android:layout_marginEnd="5dp"
                         android:src="@drawable/frame" />
 
                     <TextView
@@ -199,16 +199,16 @@
                 <EditText
                     android:id="@+id/dependencytitle"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:paddingStart="10dp"
-                    android:paddingVertical="15dp"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/background"
                     android:fontFamily="@font/inter"
                     android:hint="Dependency Title"
-                    android:textColorHint="@color/smallheading"
-                    android:textColor="@color/dependencycolor"
-                    android:backgroundTint="@color/background"
                     android:inputType="text"
+                    android:paddingVertical="15dp"
+                    android:paddingStart="10dp"
+                    android:textColor="@color/dependencycolor"
+                    android:textColorHint="@color/smallheading"
                     android:textSize="14sp" />
 
             </LinearLayout>
@@ -360,154 +360,7 @@
                 android:paddingVertical="5dp"
                 android:text="Great repository names are short and memorable. Need inspiration?"
                 android:textColor="@color/detail"
-                android:textSize="12dp" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/inter"
-                    android:gravity="start"
-                    android:paddingVertical="5dp"
-                    android:text="Image Prompts ("
-                    android:textColor="@color/dependencycolor"
-                    android:textSize="14dp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/inter"
-                    android:gravity="start"
-                    android:paddingVertical="5dp"
-                    android:text=" * "
-                    android:textColor="#FF0000"
-                    android:textSize="14dp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/inter"
-                    android:gravity="start"
-                    android:paddingVertical="5dp"
-                    android:text=")."
-                    android:textColor="@color/tabcolor"
-                    android:textSize="14dp" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/promptimage"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal" />
-
-                <ImageView
-                    android:id="@+id/addimage"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:padding="10dp"
-                    android:layout_gravity="center"
-                    android:src="@drawable/add"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/inter"
-                    android:gravity="start"
-                    android:paddingVertical="5dp"
-                    android:text="Video Prompts ("
-                    android:textColor="@color/dependencycolor"
-                    android:textSize="14dp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/inter"
-                    android:gravity="start"
-                    android:paddingVertical="5dp"
-                    android:text=" Optional "
-                    android:textColor="@color/detail"
-                    android:textSize="14dp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/inter"
-                    android:gravity="start"
-                    android:paddingVertical="5dp"
-                    android:text=")."
-                    android:textColor="@color/tabcolor"
-                    android:textSize="14dp" />
-
-            </LinearLayout>
-
-            <VideoView
-                android:id="@+id/videoPreview"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:visibility="gone" />
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:background="@drawable/bkforcreate">
-
-                <TextView
-                    android:id="@+id/selectVideoButton"
-                    android:layout_width="wrap_content"
-                    android:paddingVertical="15dp"
-                    android:paddingHorizontal="20dp"
-                    android:textStyle="bold"
-                    android:fontFamily="@font/inter"
-                    android:textColor="@color/background"
-                    android:background="@color/dependencycolor"
-                    android:layout_height="wrap_content"
-                    android:text="Upload" />
-
-                <EditText
-                    android:id="@+id/videoprompt"
-                    android:layout_width="match_parent"
-                    android:paddingStart="10dp"
-                    android:layout_height="match_parent"
-                    android:fontFamily="@font/inter"
-                    android:hint="Select a Video"
-                    android:textColorHint="@color/smallheading"
-                    android:textColor="@color/dependencycolor"
-                    android:backgroundTint="@color/background"
-                    android:inputType="text"
-                    android:textSize="14dp" />
-
-            </LinearLayout>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/inter"
-                android:gravity="start"
-                android:paddingVertical="5dp"
-                android:layout_marginBottom="20dp"
-                android:text="Great repository names are short and memorable. Need inspiration?"
-                android:textColor="@color/detail"
+                android:layout_marginBottom="50dp"
                 android:textSize="12dp" />
 
             <TextView

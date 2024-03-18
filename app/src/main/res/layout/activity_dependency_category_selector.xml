@@ -10,7 +10,7 @@
 
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".insider.profile.drawer.post.DependencyCategorySelectorActivity">
+    tools:context=".insider.profile.drawer.post.posting.DependencyCategorySelectorActivity">
 
     <ImageView
         android:id="@+id/backbtn"

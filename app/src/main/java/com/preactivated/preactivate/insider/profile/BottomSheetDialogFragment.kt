@@ -30,6 +30,7 @@ import com.google.firebase.storage.FirebaseStorage
 import com.preactivated.preactivate.R
 import com.preactivated.preactivate.insider.profile.drawer.ConnectLocalDeviceActivity
 import com.preactivated.preactivate.insider.profile.drawer.ReleaseDependencyActivity
+import com.preactivated.preactivate.insider.profile.drawer.post.posting.PreactivateFileActivity
 import com.preactivated.preactivate.starting.LoginActivity
 import de.hdodenhof.circleimageview.CircleImageView
 import java.io.ByteArrayOutputStream
@@ -102,7 +103,7 @@ class BottomSheetDialogFragment : BottomSheetDialogFragment() {
 
         val readdocumentationButton = view.findViewById<LinearLayout>(R.id.readdoc)
         readdocumentationButton.setOnClickListener {
-            val intent = Intent(activity, SettingsActivity::class.java)
+            val intent = Intent(activity, PreactivateFileActivity::class.java)
             startActivity(intent)
         }
 

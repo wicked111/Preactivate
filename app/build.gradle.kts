@@ -46,6 +46,7 @@ dependencies {
     implementation("com.google.firebase:firebase-storage-ktx:20.3.0")
     implementation("androidx.activity:activity-ktx:1.8.2")
     implementation("com.google.firebase:firebase-database-ktx:20.3.1")
+    implementation("androidx.activity:activity-ktx:1.8.2")
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
@@ -70,6 +71,8 @@ dependencies {
     implementation ("com.airbnb.android:lottie:6.2.0")
     implementation ("com.google.firebase:firebase-storage-ktx")
     implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-android")
+    //......Justified Text box
+    implementation ("jp.wasabeef:richeditor-android:2.0.0")
 
 
 }

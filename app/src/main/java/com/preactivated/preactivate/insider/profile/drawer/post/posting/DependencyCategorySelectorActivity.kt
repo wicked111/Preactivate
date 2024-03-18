@@ -1,4 +1,4 @@
-package com.preactivated.preactivate.insider.profile.drawer.post
+package com.preactivated.preactivate.insider.profile.drawer.post.posting
 
 import android.content.Intent
 import android.os.Build
@@ -7,7 +7,6 @@ import android.util.Log
 import android.view.View
 import android.view.WindowManager
 import android.widget.AdapterView
-import android.widget.ArrayAdapter
 import android.widget.ImageView
 import android.widget.Spinner
 import android.widget.TextView
